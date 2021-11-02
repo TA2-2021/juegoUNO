@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Bienvenidos</title>
+    <title>Registro</title>
 </head>
-<body> 
+<body>
 
-        <!--<nav class="navbar navbar-expand-lg navbar-light ">
+<!--<nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,17 +39,17 @@
 
                 <form method="post" action="" class="form">
 
-                    <h1>Iniciar Sesion</h1>
+                    <h1>Registrate!</h1>
                     <input type="text" name="user" placeholder="Usuario" > 
                     <input type="text" name="pass" placeholder="Contraseña">
+                    <input type="text" name="pass" placeholder="Confirmar Contraseña">
                     <a href="menu.php">Confirmar</a>
-                    <a href="registrarse.php">Registrarse</a>
+                    <a href="index.php">Volver</a>
                 </form>
             </div> 
 
 
     </section>
-
-
+    
 </body>
 </html>
