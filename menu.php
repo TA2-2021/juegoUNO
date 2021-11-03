@@ -19,8 +19,8 @@
             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical" >
                 <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><h1 class="lal" >Historial</h1></a>
                 <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Tienda</a>
-                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Emparejamiento</a>
-                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-personajes" aria-selected="false">Personajes</a>
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Jugar</a>
+                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-personajes" aria-selected="false">Perfil</a>
                 <a class="nav-link" href="index.php" >Cerrar Sesion</a>
             </div>
 
@@ -76,7 +76,7 @@
 
         <div class="list-group">
             <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                The current link item
+                Jugadores conectados
             </a>
             <a href="#" class="list-group-item list-group-item-action">A second link item</a>
             <a href="#" class="list-group-item list-group-item-action">A third link item</a>
