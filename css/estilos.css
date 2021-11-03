@@ -23,12 +23,6 @@ body{
     margin: auto;
 }
 
-.navbar{
-    font-size: 2rem;
-    background-color: rgb(243, 209, 181);
-    height: 100px;
-}
-
 .inicio{
     width: 100%;
     height: 100%;
@@ -77,5 +71,41 @@ body{
     color: rgb(255, 255, 255);
     text-shadow: -2px -2px 2px #000, 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000;
     margin-top: 20%;
+}
+
+.todo{
+    position: relative;
+}
+
+.flex-column{
+    width: 14%;
+    margin-top: 13%;
+    margin-left: 0.5%;
+    font-size: 2rem;
+    z-index: 10;
+    box-shadow: 5px 0px 70px 20px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 3%;
+}
+
+.tab-content{
+    width: 70%;
+    height: 700px;
+    margin-top: 5%;
+    background-color: rgba(0, 0, 0, 0.452);
+    margin-left: 0.5%;
+    border-radius: 2%;
+    box-shadow: 5px 0px 30px 20px;
+}
+
+.list-group{
+    position: relative;
+    width: 14%;
+    float: right;
+    margin-top: -25%;
+    margin-right: 0.5%;
+    font-size: 1.5rem;
+    box-shadow: 5px 0px 70px 20px;
 }
 
