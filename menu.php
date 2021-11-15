@@ -78,12 +78,24 @@
             <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                 Jugadores conectados
             </a>
-            <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-            <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-            <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-            <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
+            <a href="#" class="lol2 list-group-item" id="btn-abrir" >A second link item</a>
+
         </div>
+
+        <div class="overlay" id="overlay">
+		    <div class="popup" id="popup">
+
+			<h1>¿Iniciar partida?</h1>
+			<input type="submit" class="btn-lol" value="Si" onclick="enviarP()">
+			<input type="submit" class="btn-cerrar" id="btn-cerrar" value="No">
+
+		    </div>
+	    </div>
     
+    <script> function enviarP() { 
+    location.href = "partida.php"; 
+    }
+    </script>
     <script src="app.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

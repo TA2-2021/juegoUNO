@@ -109,3 +109,131 @@ body{
     box-shadow: 5px 0px 70px 20px;
 }
 
+
+.overlay{
+    background: #00000080;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.popup{
+    background: cornsilk;
+    box-shadow: 0px 0px 5px 0px rgb(0, 0, 0,.3);
+    border-radius: 3px;
+    font-family: 'Oleo Script', cursive;
+    padding: 20px;
+    text-align: center;
+    width: 600px;   
+}
+
+.popup .btn-lol{
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.popup .btn-cerrar{
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.popup .btn-lol:hover{
+    background: chocolate;
+}
+
+.popup .btn-cerrar:hover{
+    background: chocolate;
+}
+
+
+.contE{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.contM{
+    width: 100%;
+    height: 220px;
+    position: relative;
+}
+
+.contU{
+    width: 100%;
+    height: 280px;
+    position: relative;
+}
+
+.contE > .cartasE{
+    width: 70%;
+    height: 200px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contM > .mazoD{
+    width: 13%;
+    height: 200px;
+    background-color: white;
+    position: relative;
+    margin-right: auto;
+    top: 10px;
+    left: 35%;
+    border-radius: 5%;
+}
+
+.contM > .mazo{
+    width: 13%;
+    height: 200px;
+    background-color: white;
+    position: relative;
+    margin-left: auto;
+    top: -190px;
+    right: 35%;
+    border-radius: 5%;
+}
+
+.contU > .cartasU{
+    width: 70%;
+    height: 250px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 10px;
+}
+
+.contE >.cartasE > .carta1{
+    width: 14%;
+    height: 160px;
+    background-color: violet;
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1.5%;
+    border-radius: 5%;
+}
+
+.contU >.cartasU > .carta1{
+    width: 16%;
+    height: 190px;
+    background-color: violet;
+    float: left;
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-top: 4%;
+    border-radius: 5%;
+}
+
