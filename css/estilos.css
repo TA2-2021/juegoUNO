@@ -80,13 +80,37 @@ body{
 .flex-column{
     width: 14%;
     margin-top: 13%;
-    margin-left: 0.5%;
+    margin-left: -11.5%;
     font-size: 2rem;
     z-index: 10;
     box-shadow: 5px 0px 70px 20px;
     background-color: rgb(255, 255, 255);
     text-align: center;
     border-radius: 3%;
+}
+
+.contu{
+    width: 10%;
+    height: 10%;
+    margin-top: 2%;
+    margin-left: 2%;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px 5px;
+}
+
+.infou>h1{
+    font-size: 3rem;
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+.infou>h2{
+    font-size: 3rem;
+    position: relative;
+    margin: auto;
+    text-align: center;
 }
 
 .tab-content{
@@ -235,5 +259,9 @@ body{
     margin-right: 2%;
     margin-top: 4%;
     border-radius: 5%;
+}
+
+.lol3{
+    margin-left: 0.5%;
 }
 

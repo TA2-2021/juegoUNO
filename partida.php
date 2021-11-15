@@ -11,7 +11,7 @@
                 <img src="img/fondo.jpg" alt="img1">
             </div>
         <div class="d-flex align-items-start todo">
-            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical" >
+            <div class="nav flex-column nav-pills me-3 lol3" id="v-pills-tab" role="tablist" aria-orientation="vertical" >
                 <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><h1 class="lal" >Uno</h1></a>
                 <a class="nav-link" href="menu.php" >Salir</a>
             </div>
@@ -20,7 +20,7 @@
                 <!--Muestra historial-->
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
 		            	
-		            <div class="contE">
+		        	<div class="contE">
 
 		            		<div class="cartasE">
 		            				

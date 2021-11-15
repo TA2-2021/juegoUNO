@@ -16,6 +16,13 @@
 
         <div class="d-flex align-items-start todo">
 
+            <div class="contu">
+                <div class="infou">
+                    <h1>Faka</h1>
+                    <h2>200</h2>
+                </div>
+            </div>
+
             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical" >
                 <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><h1 class="lal" >Historial</h1></a>
                 <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Tienda</a>
