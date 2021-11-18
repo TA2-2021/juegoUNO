@@ -18,13 +18,12 @@
 
             <div class="perga">
 
-                <form method="post" action="" class="form">
-
+                <form method="post" action="php/registro.php" class="form" onsubmit="registrar()" >
                     <h1>Registrate!</h1>
                     <input type="text" name="user" placeholder="Usuario" > 
                     <input type="text" name="pass" placeholder="Contraseña">
-                    <input type="text" name="pass" placeholder="Confirmar Contraseña">
-                    <a href="menu.php">Confirmar</a>
+                    <input type="text" name="confirmP" placeholder="Confirmar Contraseña">
+                    <input type="submit" value="Registrar">
                     <a href="index.php">Volver</a>
                 </form>
             </div> 

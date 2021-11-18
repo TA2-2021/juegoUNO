@@ -18,12 +18,12 @@
 
             <div class="perga">
 
-                <form method="post" action="" class="form">
+                <form method="post" action="php/login.php" class="form">
 
                     <h1>Iniciar Sesion</h1>
                     <input type="text" name="user" placeholder="Usuario" > 
                     <input type="text" name="pass" placeholder="Contraseña">
-                    <a href="menu.php">Confirmar</a>
+                    <input type="submit" value ="Mandale">
                     <a href="registrarse.php">Registrarse</a>
                 </form>
             </div> 
