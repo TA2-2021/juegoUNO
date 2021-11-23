@@ -9,7 +9,8 @@
     <title>Registro</title>
 </head>
 <body>
-
+    <div id="h">
+    </div>
         <div class="fondo">
                 <img src="img/fondo.jpg" alt="img1">
             </div>
@@ -18,19 +19,25 @@
 
             <div class="perga">
 
-                <form method="post" action="" class="form">
-
+                <form method="post" action="registro.php" class="form">
                     <h1>Registrate!</h1>
-                    <input type="text" name="user" placeholder="Usuario" > 
+                    <input type="text" name="user" placeholder="Usuario" >
                     <input type="text" name="pass" placeholder="Contraseña">
-                    <input type="text" name="pass" placeholder="Confirmar Contraseña">
-                    <a href="menu.php">Confirmar</a>
+                    <input type="text" name="confirmP" placeholder="Confirmar Contraseña">
+                    <input type="submit" value="Registrar" class="boton">
                     <a href="index.php">Volver</a>
                 </form>
             </div> 
 
 
     </section>
-    
+    <script>
+        
+       // $("boton").click(function(){
+  //$.ajax({url: "registro.php", success: function(result){ //nunca tiene que ir en un submit, pero tiene que nacer y morir en la misma pagina el ajax.
+   // $("#h").html(result);
+ // }});
+//});
+    </script>
 </body>
 </html>

@@ -17,8 +17,11 @@
         <div class="d-flex align-items-start todo">
 
             <div class="contu">
-                <div class="infou">
-                    <h1>Faka</h1>
+                <div class="infou" id = "h">
+                    <h1><?php
+                    session_start();
+                    echo $_SESSION['user'];
+                    ?></h1>
                     <h2>200</h2>
                 </div>
             </div>
