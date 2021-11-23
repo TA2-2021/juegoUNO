@@ -1,15 +1,25 @@
 <?php
 
-    class Usuario{
-        protected $nombre;
-        protected $clave;
-        protected $puntaje;
+class Usuario{
+    protected $usuario;
+    protected $clave;
+    protected $puntos;
 
-        public function __construct($nom, $clave){
-            $this-> nombre = $nom;
-            $this-> clave = $clave;
-            $this-> puntaje = 0;
-        }
+    public function __construct($nombre, $clave, $puntos){
+        $this-> nombre = $nombre;
+        $this-> clave = $clave;
+        $this-> puntos = $puntos;
+    }
+}
+
+    //Registro de usuario
+    function registrar($nombre, $clave, $puntos){
+
+    } 
+
+    //Logeo de usuario
+    function login($nombre, $clave){
         
     }
+
 ?>
