@@ -6,7 +6,9 @@ session_start();
         $usuario = $_POST['user'];
         $clave = $_POST['pass'];
 
-        $sql = mysqli_query($cnn, "SELECT user, pass FROM usuario WHERE user = '$user' AND pwd = '$pwd'");
+        mysqli_select_db($cnn,"uno");
+        
+        $sql = mysqli_query($cnn, "SELECT user, pass FROM usuario WHERE user = '$usuario' AND pwd = '$clave'");
         $registro = mysqli_fetch_array($sql);
 
         if ($registro['user'] == $usuario AND $registro['pass'] == $clave){
@@ -22,7 +24,7 @@ session_start();
         }
         
     } catch (Exception $e) {
-        echo "Error: ". $e->getMessage();
+        echo "<script>alert('Error al conectar:". $e->getMessage()."')</script>";
         $sql = "";
         $registro = "";
         mysqli_close($cnn);

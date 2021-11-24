@@ -88,8 +88,27 @@
             <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                 Jugadores conectados
             </a>
-            <a href="#" class="lol2 list-group-item" id="btn-abrir" >A second link item</a>
-
+            <?php
+                try {
+                    $cnn = mysqli_connect("locahost", "root", "", "uno");
+                    mysqli_select_db($cnn, "uno");
+                    $sql = mysqli_query($cnn, "SELECT user, estado FROM usuario ORDER BY estado ASC");
+                    
+                    if(isset($registro['user']) AND isset($registro['estado'])){
+                        while($registro = mysqli_fetch_array($sql)){
+                            echo '<a href="#" class="lol2 list-group-item" id="btn-abrir" >'. $registro['user'] .'-'. $registro['estado'] .'</a>';
+                        }
+                    }else{
+                        echo "<script>alert('Error al mostrar usuarios:". $e->getMessage()."')</script>";
+                        mysqli_close($cnn);
+                        $sql = "";
+                    }
+                } catch (Exception $e) {
+                    echo "<script>alert('Error al mostrar usuarios:". $e->getMessage()."')</script>";
+                    mysqli_close($cnn);
+                    $sql = "";
+                }
+            ?>
         </div>
 
         <div class="overlay" id="overlay">
