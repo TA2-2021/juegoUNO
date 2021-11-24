@@ -1,22 +1,30 @@
 <?php
 session_start();
-$cnn = mysqli_connect("Localhost", "root", "", "verga");
+    try {
+        $cnn = mysqli_connect("localhost", "root", "", "uno");
 
-if($cnn->connect_error){
-        die ("Ñery error de konetzion". $cnn->connect_error);
+        $usuario = $_POST['user'];
+        $clave = $_POST['pass'];
+
+        $sql = mysqli_query($cnn, "SELECT user, pass FROM usuario WHERE user = '$user' AND pwd = '$pwd'");
+        $registro = mysqli_fetch_array($sql);
+
+        if ($registro['user'] == $usuario AND $registro['pass'] == $clave){
+            $_SESSION['usuario'] = $usuario;
+            $_SESSION['login'] = true;
+            header('location: ../menu.php');
+        }else{
+            echo "<script>alert('Usuario y/o clave incorrectas');</script>";
+            mysqli_close($cnn);
+            $sql = "";
+            $registro = "";
+            header('location: /index.php');
+        }
+        
+    } catch (Exception $e) {
+        echo "Error: ". $e->getMessage();
+        $sql = "";
+        $registro = "";
+        mysqli_close($cnn);
     }
-
-$user = $_POST['user'];
-$_SESSION['user'] = $_POST['user'];
-$pwd = $_POST['pass'];
-
-$sql = mysqli_query($cnn, "SELECT user FROM usuario WHERE user = '$user' AND pwd = '$pwd'");
-$registro = mysqli_fetch_array($sql);
-
-if($registro['user'] == $_POST['user']){
-    $_SESSION['logeo'] = true;
-    header('location: ../menu.php');
-
-} else {header('location: ../index.php');}  
-
 ?>
