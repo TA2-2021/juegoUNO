@@ -22,7 +22,7 @@
 
                     <h1>Iniciar Sesion</h1>
                     <input type="text" name="user" placeholder="Usuario" > 
-                    <input type="text" name="pass" placeholder="Contraseña">
+                    <input type="password" name="pass" placeholder="Contraseña">
                     <input type="submit" value ="Mandale">
                     <a href="registrarse.php">Registrarse</a>
                 </form>

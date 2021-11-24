@@ -18,11 +18,20 @@
 
             <div class="contu">
                 <div class="infou" id = "h">
-                    <h1><?php
-                    session_start();
-                    echo $_SESSION['user'];
-                    ?></h1>
-                    <h2>200</h2>
+                    <h1>
+                    <?php
+                        session_start();
+                        echo $_SESSION['usuario'];
+                        echo "<br>";
+                        echo "Puntos: ". $_SESSION['puntos'];
+                    ?>
+                    </h1>
+                    
+                    <h2>
+                    <?php
+                        
+                    ?>
+                    </h2>
                 </div>
             </div>
 
@@ -90,20 +99,28 @@
             </a>
             <?php
                 try {
-                    $cnn = mysqli_connect("locahost", "root", "", "uno");
+                    $cnn = mysqli_connect("localhost", "root", "", "uno");
                     $sql = mysqli_query($cnn, "SELECT user, estado FROM usuario ORDER BY estado ASC");
-                    
-                    if(isset($registro['user']) AND isset($registro['estado'])){
-                        while($registro = mysqli_fetch_array($sql)){
+                    $aux = mysqli_fetch_array($sql);
+                    $contador = 0;
+                    if(isset($aux['user']) AND isset($aux['estado'])){
+
+                        while($registro = mysqli_fetch_array($sql) and $contador <= 15){
                             echo '<a href="#" class="lol2 list-group-item" id="btn-abrir" >'. $registro['user'] .'-'. $registro['estado'] .'</a>';
+                            $contador+=1;
                         }
+                        
+                    mysqli_close($cnn);
+                    $sql = "";
+                    $registro = "";
+                    $aux = "";
                     }else{
-                        echo "<script>alert('Error al mostrar usuarios:". $e->getMessage()."')</script>";
+                        echo "<script>alert('Error al mostrar usuarios:')</scrip>";
                         mysqli_close($cnn);
                         $sql = "";
                     }
                 } catch (Exception $e) {
-                    echo "<script>alert('Error al mostrar usuarios:". $e->getMessage()."')</script>";
+                    echo "<script>alert('Error al mostrar usuarios:')</scipt>";
                     mysqli_close($cnn);
                     $sql = "";
                 }
