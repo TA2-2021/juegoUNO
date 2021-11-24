@@ -91,7 +91,6 @@
             <?php
                 try {
                     $cnn = mysqli_connect("locahost", "root", "", "uno");
-                    mysqli_select_db($cnn, "uno");
                     $sql = mysqli_query($cnn, "SELECT user, estado FROM usuario ORDER BY estado ASC");
                     
                     if(isset($registro['user']) AND isset($registro['estado'])){
