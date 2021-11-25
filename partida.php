@@ -57,21 +57,141 @@
 
 
 		            		<div class="cartasU">
-		            				
+		        								
 		            			<div class="carta1">
-		            				
+								<?php
+
+								session_start();
+								//conexion
+								$cnn = mysqli_connect("localhost", "root", "", "bdProgra");
+								//consulta
+								$randomNumbers = Array(
+									1 => 0,
+									2 => 1,
+									3 => 2,
+									4 => 3,
+									5 => 4,
+									6 => 5,
+									7 => 6,
+									8 => 7,
+									9 => 8,
+									10 => 9,
+									11 => "+2",
+									12 => "+4",
+									13 => "CambiaColor",
+									14 => "Negar",
+									15 => "ElegirColor"
+								);
+								$randomColors = array(
+									1 => 'Verde',
+									2 => 'Rojo',
+									3 => 'Azul',
+									4 => 'Amarillo',
+									5 => 'Negro'
+								);
+								shuffle($randomNumbers);
+								shuffle ($randomColors);
+
+								$seleccion = array_rand($randomColors,4);
+
+								$numeroSelect = array_rand($randomNumbers,15);
+								$random1 = random_int(1,10);
+								$random2 = random_int(1,4);
+								$sql = mysqli_query($cnn, "SELECT * FROM carta WHERE valor = '$randomNumbers[$random1]' and color = '$randomColors[$random2]'");
+								$resultado = mysqli_fetch_array($sql);
+								$color = $resultado['color'];
+								$numerito = $resultado['valor'];
+
+								if (isset($resultado)){
+									if ($randomNumbers[1] or $randomNumbers[2] or $randomNumbers[3] or $randomNumbers[4] or $randomNumbers[5] or $randomNumbers[6] or $randomNumbers[7] or $randomNumbers[8] or $randomNumbers[9] or $randomNumbers[10] AND $randomColors[5] != $randomColors[5]){
+									echo "<img src='img/$color/$numerito.png'>";
+									}
+										elseif ($randomNumbers[11] AND $color != 'Negro'){
+										echo "<img src='img/$color/+2.png'>";
+									}
+									 	elseif ($randomNumbers[12]){
+										echo "<img src='img/Negro/$numerito.png'>";
+									}
+										elseif ($randomNumbers[13] AND $color != 'Negro'){
+										echo "<img src='img/$color/colores.png'>";
+									} 
+										elseif ($randomNumbers[14] AND $color != 'Negro'){
+										echo "<img src='img/$color/Negar.png'>";
+									} 
+										elseif ($randomNumbers[15]){
+										echo "<img src='img/Negro/$numerito.png'>";
+								}
+								
+							}elseif ($randomNumbers[12]) {
+
+								echo "<img src='img/Negro/+4.png'>";
+							} else echo "<img src='img/$color/colores.png'>";
+								//print "<img src=\"img\$resultado['color']\$resultado['numero'].png\">"
+								?>
 		            			</div>
 
 		            			<div class="carta1">
-		            				
+								<?php
+
+			
+								//conexion
+								$cnn = mysqli_connect("localhost", "root", "", "bdProgra");
+								//consulta
+								$randomNumbers = range(0,9);
+								$randomColors = array(
+									0 => 'Verde',
+									1 => 'Rojo',
+									2 => 'Azul',
+									3 => 'Amarillo'
+								);
+								shuffle($randomNumbers);
+								shuffle ($randomColors);
+								$sql = mysqli_query($cnn, "SELECT numero,color FROM carta WHERE numero = '$randomNumbers[1]' AND color = '$randomColors[0]'");
+								$resultado = mysqli_fetch_array($sql);
+								echo $resultado['numero'].$resultado['color'];
+								?>
 		            			</div>	
 
 		            			<div class="carta1">
-		            				
+								<?php
+
+			
+								//conexion
+								$cnn = mysqli_connect("localhost", "root", "", "bdProgra");
+								//consulta
+								$randomNumbers = range(0,9);
+								$randomColors = array(
+									0 => 'Verde',
+									1 => 'Rojo',
+									2 => 'Azul',
+									3 => 'Amarillo'
+								);
+								shuffle($randomNumbers);
+								shuffle ($randomColors);
+								$sql = mysqli_query($cnn, "SELECT numero,color FROM carta WHERE numero = '$randomNumbers[1]' AND color = '$randomColors[0]'");
+								$resultado = mysqli_fetch_array($sql);
+								echo $resultado['numero'].$resultado['color'];
+								?>
 		            			</div>	
 
 		            			<div class="carta1">
-		            				
+								<?php
+								//conexion
+								$cnn = mysqli_connect("localhost", "root", "", "bdProgra");
+								//consulta
+								$randomNumbers = range(0,9);
+								$randomColors = array(
+									0 => 'Verde',
+									1 => 'Rojo',
+									2 => 'Azul',
+									3 => 'Amarillo'
+								);
+								shuffle($randomNumbers);
+								shuffle ($randomColors);
+								$sql = mysqli_query($cnn, "SELECT numero,color FROM carta WHERE numero = '$randomNumbers[1]' AND color = '$randomColors[0]'");
+								$resultado = mysqli_fetch_array($sql);
+								echo $resultado['numero'].$resultado['color'];
+								?>
 		            			</div>	
 		            			
 		            		</div>	
