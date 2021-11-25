@@ -1,44 +1,32 @@
 <?php 
-    try {
-        $usuario = $_POST['user'];
-        $clave = $_POST['pass'];
-        $confClave = $_POST['confirmP'];
+    include('conexion.php');
+    $usuario = $_POST['user'];
+    $clave = $_POST['pass'];
 
-        $cnn = mysqli_connect("localhost", "root", "", "uno");
+        if($conn->connect_error){
+            die("Error al conectar: ". $conn->connect_error);
+        }
 
-        $sql = mysqli_query($cnn, "SELECT user FROM usuario WHERE user = '$usuario'");
-        $registro=mysqli_fetch_array($sql);
+        $sql = sprintf("SELECT user FROM usuario WHERE user = '%s'", mysqli_real_escape_string($conn, $usuario)); 
+        $registro = $conn-> query($sql);
+        $resultado = mysqli_fetch_array($registro);
 
-        if($clave != $confClave){
-            echo "<script>alert('claves distintas, revise!')</script>";
-        }else{        
-            //verificar que el resultado es distinto a NULL o FALSE
-            if(isset($registro['user'])){
-                echo "<script>alert('El usuario ya existe')</script>";
-                $sql = "";
-                $registro = "";
-                mysqli_close($cnn);
-                header('location: ../index.php');
+        
+        if(isset($resultado)){
+            echo "<script>alert('Usuario ya existente')</script>";
+        }else{
+            if($_POST['pass'] <> $_POST['confirmP']){
+                echo "<script>
+                alert('Las claves no coinciden');
+                window.location= '../registrarse.php';
+                </script>";
             }else{
-                $sql = mysqli_query($cnn,"INSERT INTO usuario VALUES ('$usuario','$clave','Desconectado',0)");
-                $registro = mysqli_fetch_array($sql);
-                //verificar que el resultado es distinto a NULL o FALSE
-                if(isset($registro['user'])){
-                    echo "<script>alert('Usuario creado correctamente')</script>";
-                    $sql = "";
-                    $registro = "";
-                    mysqli_close($cnn);
-                    header('location: ../login.php');
-                }else{
-                    echo "<script>alert('Error al crear el usuario')</script>";
-                }
+                $sql = sprintf("INSERT INTO usuario VALUES ('$usuario', '%s', 'Desconectado', 0)", mysqli_real_escape_string($conn, $clave));
+                $registro = $conn-> query($sql);
+                $_SESSION['login'] = "registrado";
+                echo "<script>
+                window.location= '../index.php';
+                </script>";
             }
         }
-        
-    } catch (Exception $e) {
-        echo "Error: ". $e->getMessage();
-        $sql = "";
-        $registro = "";
-        mysqli_close($cnn);
-    }
 ?>
