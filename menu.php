@@ -60,21 +60,49 @@
 						</thead>
 						<tbody>
 						<tr>
-							<th scope="row">1</th>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>@mdo</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td colspan="2">Larry the Bird</td>
-							<td>@twitter</td>
+                            <?php
+                            //Mostrar ganador
+                            include('php/conexion.php');
+                            $usuario = $_SESSION['usuario'];
+                            
+                            if($conn->connect_error){
+                                die("Error al conectar: ". $conn->connect_error);
+                            }
+
+                            $sql = "SELECT ganador, perdedor FROM juega WHERE user1 = '$usuario'";
+                            $registro = $conn-> query($sql);
+                            $contador = 1;
+
+                            if(isset($registro)){
+                                while($resultado = mysqli_fetch_array($registro)){
+                                    echo "<tr>";
+                                    echo "<td> ". $contador ."</td>";
+                                    echo "<td> ". $resultado['ganador'] ."</td>";
+                                    echo "<td> ". $resultado['perdedor'] ."</td>";
+                                    echo "<td>Identificador?</td>";
+                                    echo "</tr>";
+                                    $contador += 1;
+                                }
+                            }else{
+                                //Si el usuario no es user1, buscar en user2
+                                $sql = "SELECT ganador, perdedor FROM juega WHERE user2 = '$usuario'";
+                                $registro = $conn-> query($sql);
+
+                                if(isset($registro)){
+                                    while($resultado = mysqli_fetch_array($registro)){
+                                        echo "<tr>";
+                                        echo "<td> ". $contador ."</td>";
+                                        echo "<td> ". $resultado['ganador'] ."</td>";
+                                        echo "<td> ". $resultado['perdedor'] ."</td>";
+                                        echo "<td>Identificador?</td>";
+                                        echo "</tr>";
+                                        $contador += 1;
+                                    }
+                                }else{
+                                    echo "<script>alert('No hay partidas')</script>";
+                                }
+                            }
+                            ?>
 						</tr>
 						</tbody>
 					</table>
