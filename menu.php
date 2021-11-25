@@ -28,9 +28,6 @@
                     </h1>
                     
                     <h2>
-                    <?php
-                        
-                    ?>
                     </h2>
                 </div>
             </div>
@@ -102,6 +99,7 @@
                                     echo "<script>alert('No hay partidas')</script>";
                                 }
                             }
+                            $conn-> close();
                             ?>
 						</tr>
 						</tbody>
@@ -144,6 +142,7 @@
                     }else{
                         echo "<script>alert('Error al mostrar usuarios:')</scrip>";
                     }
+                $conn-> close();
             ?>
         </div>
 
