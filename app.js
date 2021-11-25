@@ -1,13 +1,16 @@
-var btnAbrirpopup = document.getElementById('btn-abrir');
+var btnAbrirpopup = document.getElementsByClassName('lol2');
 var overlay = document.getElementById('overlay');
 var popup = document.getElementById('popup');
 var btnCerrarpopup = document.getElementById('btn-cerrar');
 
-btnAbrirpopup.addEventListener('click', function(e){
-    e.preventDefault();
-    overlay.style.visibility = "visible";
-});
 
-btnCerrarpopup.addEventListener("click", function(){
-    overlay.style.visibility = "hidden";
-});
+for (var i=0; i < btnAbrirpopup.length; i++) {
+    btnAbrirpopup[i].onclick = function(){
+        swal({
+            title: '¿Iniciar partida?',
+            buttons: ["No", "Si"],
+            }).then(function(){
+            window.location = "partida.php";
+        });
+    }
+};
