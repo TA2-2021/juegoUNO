@@ -104,13 +104,13 @@
             if($conn->connect_error){
                 die("Error al conectar: ". $conn->connect_error);
             }
-                $sql = "SELECT user, estado FROM usuario WHERE user NOT IN ('$usuario') ORDER BY estado ASC";
+                $sql = "SELECT username, estado FROM usuario WHERE username NOT IN ('$usuario') ORDER BY estado ASC";
                 $registro = $conn-> query($sql);
                 $contador = 0;
                 
                 if(isset($registro)){
                     while($resultado = mysqli_fetch_array($registro) and $contador <= 15){
-                            echo '<a href="#" class="lol2 list-group-item" id="btn-abrir" >'. $resultado['user'] .'-'. $resultado['estado'] .'</a>';
+                            echo '<a href="#" class="lol2 list-group-item" id="btn-abrir" >'. $resultado['username'] .'-'. $resultado['estado'] .'</a>';
                             $contador+=1;
                     }
                     }else{

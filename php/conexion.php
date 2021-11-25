@@ -2,7 +2,7 @@
     DEFINE("SERVIDORBD", "localhost");
     DEFINE("USUARIOBD", "root");
     DEFINE("PASSWORDBD", "");
-    DEFINE("BD", "uno");
+    DEFINE("BD", "bdprogra");
 
     $conn = new mysqli(SERVIDORBD, USUARIOBD, PASSWORDBD, BD);
 ?>

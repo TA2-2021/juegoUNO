@@ -7,7 +7,7 @@
             die("Error al conectar: ". $conn->connect_error);
         }
 
-        $sql = sprintf("SELECT user FROM usuario WHERE user = '%s'", mysqli_real_escape_string($conn, $usuario)); 
+        $sql = sprintf("SELECT username FROM usuario WHERE username = '%s'", mysqli_real_escape_string($conn, $usuario)); 
         $registro = $conn-> query($sql);
         $resultado = mysqli_fetch_array($registro);
 

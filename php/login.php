@@ -11,7 +11,7 @@ session_start();
         }
         //consulta, sprintf toma un formato string y devuelve string, mysqli_real_escape_string "Filtra" los escapes que puedan perjudicar la conexion a la bdd, quedando vulnerables
         //ejemplo, si escriben sentencias SQL y pueden filtrarse en la pagina
-        $sql = sprintf("SELECT user, clave, puntos FROM usuario WHERE user = '%s' AND clave = '%s'", mysqli_real_escape_string($conn, $usuario), mysqli_real_escape_string($conn, $clave));
+        $sql = sprintf("SELECT username, clave, puntos FROM usuario WHERE username = '%s' AND clave = '%s'", mysqli_real_escape_string($conn, $usuario), mysqli_real_escape_string($conn, $clave));
 
         //ejecutar consulta
         $registro = $conn-> query($sql);
