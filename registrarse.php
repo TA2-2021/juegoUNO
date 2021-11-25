@@ -19,7 +19,7 @@
 
             <div class="perga">
 
-                <form method="post" action="registro.php" class="form">
+                <form method="post" action="php/registro.php" class="form">
                     <h1>Registrate!</h1>
                     <input type="text" name="user" placeholder="Usuario" >
                     <input type="text" name="pass" placeholder="Contraseña">

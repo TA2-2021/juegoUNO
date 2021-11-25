@@ -1,10 +1,10 @@
 <?php 
     try {
-        $cnn = mysqli_connect("localhost", "root", "", "uno");
-
         $usuario = $_POST['user'];
         $clave = $_POST['pass'];
         $confClave = $_POST['confirmP'];
+
+        $cnn = mysqli_connect("localhost", "root", "", "uno");
 
         $sql = mysqli_query($cnn, "SELECT user FROM usuario WHERE user = '$usuario'");
         $registro=mysqli_fetch_array($sql);
@@ -18,11 +18,10 @@
                 $sql = "";
                 $registro = "";
                 mysqli_close($cnn);
-                header('location: ../registrarse.php');
+                header('location: ../index.php');
             }else{
                 $sql = mysqli_query($cnn,"INSERT INTO usuario VALUES ('$usuario','$clave','Desconectado',0)");
                 $registro = mysqli_fetch_array($sql);
-
                 //verificar que el resultado es distinto a NULL o FALSE
                 if(isset($registro['user'])){
                     echo "<script>alert('Usuario creado correctamente')</script>";

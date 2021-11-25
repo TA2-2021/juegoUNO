@@ -18,16 +18,21 @@ session_start();
             $_SESSION['login'] = true;
             $_SESSION['puntos'] = $registro['puntos'];
 
+            //Actualizar Estado del usuario
+            /* UPDATE table_name
+            SET column_name = value
+            WHERE condition */
+            $sql = mysqli_query($cnn, "UPDATE usuario SET estado = 'Conectado' WHERE user = '$usuario'");
             mysqli_close($cnn);
             $sql = "";
             $registro = "";
             header('location: ../menu.php');
         }else{
-            echo "<script>alert('Usuario y/o clave incorrectas');</script>";
             mysqli_close($cnn);
             $sql = "";
             $registro = "";
-            header('location: /index.php');
+            $_SESSION['login'] = false;
+            header('location: ../index.php');
         }
         
     } catch (Exception $e) {
