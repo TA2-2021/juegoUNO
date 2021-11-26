@@ -25,16 +25,16 @@
 		            		<div class="cartasE">
 		            				
 		            			<div class="carta1">
-								<img src="img/revez.jpg" alt="">
+								<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src="img/revez.jpg" alt="">
 		            			</div>	
 		            			<div class="carta1">
-								<img src="img/revez.jpg" alt="">
+								<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src="img/revez.jpg" alt="">
 		            			</div>	
 		            			<div class="carta1">
-								<img src="img/revez.jpg" alt="">
+								<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src="img/revez.jpg" alt="">
 		            			</div>	
 		            			<div class="carta1">
-								<img src="img/revez.jpg" alt="">
+								<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src="img/revez.jpg" alt="">
 		            			</div>	
 		            			
 		            		</div>		
@@ -43,22 +43,21 @@
 
 		            <div class="contM">
 
-		            	<div class="mazoD">
+		            	<div class="mazoD" id="rece" ondrop='dropHandler(event);' ondragover='dragOverHandler(event);'>
 		            		
 		            	</div>
 
 		            	<div class="mazo">
-						<img src="img/revez.jpg" alt="">
+						<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src="img/revez.jpg" alt="">
 		            	</div>
 		            	
 		            </div>
 
 		            <div class="contU">
 
-
 		            		<div class="cartasU">
 		        								
-		            			<div class="carta1">
+		            			<div class="carta1" id="carta1" draggable="true">
 								<?php
 								session_start();
 								include 'codigo.php';

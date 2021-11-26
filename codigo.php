@@ -39,28 +39,28 @@ function Invocar(){
 //echo $consBar['username'].$consBar['cantCartas'];
 if (isset($resultado)){
     if ($randomNumbers[1] or $randomNumbers[2] or $randomNumbers[3] or $randomNumbers[4] or $randomNumbers[5] or $randomNumbers[6] or $randomNumbers[7] or $randomNumbers[8] or $randomNumbers[9] or $randomNumbers[10] AND $randomColors[5] != $randomColors[5]){
-    echo "<img src='img/$color/$numerito.png'>";
+    echo "<img id='cart' style='width: 99.9%; height: 99.9%; border-radius: 5%; cursor:move;' src='img/$color/$numerito.png' draggable='true'>";
     }
         elseif ($randomNumbers[11] AND $color != 'Negro'){
-        echo "<img src='img/$color/+2.png'>";
+        echo "<img  class='cart' style='width: 99.5%; height: 99.5%; border-radius: 5%;' src='img/$color/+2.png' draggable='true' >";
     }
-         elseif ($randomNumbers[12]){
-        echo "<img src='img/Negro/$numerito.png'>";
+        elseif ($randomNumbers[12]){
+        echo "<img id='cart' style='width: 99.5%; height: 99.5%; border-radius: 5%;' src='img/Negro/$numerito.png' draggable='true' >";
     }
         elseif ($randomNumbers[13] AND $color != 'Negro'){
-        echo "<img src='img/$color/colores.png'>";
+        echo "<img id='cart' style='width: 99.5%; height: 99.5%; border-radius: 5%;' src='img/$color/colores.png' draggable='true' >";
     } 
         elseif ($randomNumbers[14] AND $color != 'Negro'){
-        echo "<img src='img/$color/Negar.png'>";
+        echo "<img id='cart' style='width: 99.5%; height: 99.5%; border-radius: 5%;' src='img/$color/Negar.png' draggable='true'>";
     } 
         elseif ($randomNumbers[15]){
-        echo "<img src='img/Negro/$numerito.png'>";
+        echo "<img id='cart' style='width: 99.5%; height: 99.5%; border-radius: 5%;' src='img/Negro/$numerito.png' draggable='true' >";
 }
 
 }elseif ($randomNumbers[12]) {
 
-echo "<img src='img/Negro/+4.png'>";
-} else echo "<img src='img/$color/colores.png'>";
+echo "<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src='img/Negro/+4.png'>";
+} else echo "<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src='img/$color/colores.png'>";
 
 
 $baraja = array();
