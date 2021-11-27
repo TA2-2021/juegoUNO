@@ -40,18 +40,41 @@ body{
 }
 
 .form{
-    margin-top: 29%;
+    margin-top: 20%;
     margin-left: 18%;
 }
 
 .form h1{
     font-size: 5rem;
+    margin-bottom: 5%;
 }
 
 .form input{
-    height: 40px;
-    width: 65%;
-    padding: 5% 5% 3% 2%;
+    height: 75px;
+    width: 70%;
+    padding: 2% 5% 5% 1%;
+    background : inherit;
+    font-size: 2.3rem;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid rgb(77, 76, 76);
+    display: block;
+    margin-top: 3%;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.form input:hover{
+    transition: 1s;
+    font-size: 2.7rem;
+    border-bottom: 1px solid rgb(252, 252, 252);
+}
+
+.form a{
+    height: 70px;
+    width: 70%;
+    padding: 2% 5% 5% 1%;
     background : inherit;
     font-size: 2.5rem;
     border: 0;
@@ -59,19 +82,19 @@ body{
     background: transparent;
     border-bottom: 1px solid rgb(77, 76, 76);
     display: block;
-    margin-top: 2%;
+    margin-top: 3%;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    transition: 1s;
 }
 
-.form a{
-    text-decoration: none;
-    font-size: 2.9rem;
-    padding: 5% 3% 5% 2%;
-    position: relative;
-    top: 20px;
-    color: rgb(255, 255, 255);
-    text-shadow: -2px -2px 2px #000, 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000;
-    margin-top: 20%;
+.form a:hover{
+    transition: 1s;
+    font-size: 2.7rem;
+    border-bottom: 1px solid rgb(252, 252, 252);
 }
+
 
 .todo{
     position: relative;
@@ -263,3 +286,27 @@ body{
     margin-left: 0.5%;
 }
 
+.boton{
+    height: 70px;
+    width: 65%;
+    padding: 2% 5% 5% 1%;
+    background : inherit;
+    font-size: 2.5rem;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid rgb(77, 76, 76);
+    display: block;
+    margin-top: 3%;
+
+}
+
+.lol3{
+    height: 70px;
+    left: -6px;
+}
+
+
+.tituloP{
+    background-color: rgb(245, 245, 245);
+}
