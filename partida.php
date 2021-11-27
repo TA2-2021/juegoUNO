@@ -3,6 +3,8 @@
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  	<link rel="stylesheet" href="/resources/demos/style.css">
 	<title>bienvenidos</title>
 </head>
 <body>
@@ -25,7 +27,7 @@
 		            		<div class="cartasE">
 		            				
 		            			<div class="carta1">
-								<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src="img/revez.jpg" alt="">
+								<img style='width: 99.5%; height: 99.5%; border-radius: 5%; ' src="img/revez.jpg" alt="">
 		            			</div>	
 		            			<div class="carta1">
 								<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src="img/revez.jpg" alt="">
@@ -40,6 +42,12 @@
 		            		</div>		
 		            	
 		            </div>
+
+					<div class="botonT">
+
+						<input type="submit" class="botonT1" value="Tirar carta">
+
+					</div>
 
 		            <div class="contM">
 
@@ -56,8 +64,8 @@
 		            <div class="contU">
 
 		            		<div class="cartasU">
-		        								
-		            			<div class="carta1" id="carta1" draggable="true">
+
+								<div class="carta1" id="draggable">
 								<?php
 								session_start();
 								include 'codigo.php';
@@ -107,10 +115,16 @@
         </div> -->
     
     <script src="app.js"></script>
+	<script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  </script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 
 </body>
 </html>

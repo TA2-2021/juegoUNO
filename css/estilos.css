@@ -123,14 +123,14 @@ body{
 }
 
 .infou>h1{
-    font-size: 3rem;
+    font-size: 2rem;
     position: relative;
     margin: auto;
     text-align: center;
 }
 
 .infou>h2{
-    font-size: 3rem;
+    font-size: 2rem;
     position: relative;
     margin: auto;
     text-align: center;
@@ -309,4 +309,30 @@ body{
 
 .tituloP{
     background-color: rgb(245, 245, 245);
+}
+
+
+.botonT{
+    width: 12%;
+    height: 60px;
+    margin-top: 5%;
+    position: fixed;
+    margin-left: 10%;
+    z-index: 20;
+}
+
+.botonT1{
+    width: 105%;
+    height: 100%;
+    cursor: pointer;    
+    background: transparent;
+    color: white;
+    font-size: 2rem;
+    border: 0;
+    border-bottom: 2px solid rgb(77, 76, 76);
+}
+
+.botonT:hover{
+    transition: 1s;
+    font-size: 3;
 }
