@@ -9,32 +9,20 @@
     <title>Bienvenidos</title>
 </head>
 <body> 
-
-        <div class="fondo">
+    <div class="fondo">
                 <img src="img/fondo.jpg" alt="img1">
-            </div>
-
+    </div>
     <section class="inicio">
-
             <div class="perga">
-
                 <form method="post" action="php/login.php" class="form">
-
                     <h1>Iniciar Sesion</h1>
                     <input type="text" name="user" placeholder="Usuario" > 
                     <input type="password" name="pass" placeholder="Contraseña">
 
-<<<<<<< HEAD
                     <input id="ingresar" class="boton"type="submit" value ="Iniciar Sesion">
                     <a class="boton"href="registrarse.php">Registrarse</a>
-=======
-                    <input class="boton"type="submit" value ="Aceptar">
-                    <a href="registrarse.php">Registrarse</a>
->>>>>>> f2b9841aae7b08920105f8acf6e7686480795a0a
                 </form>
             </div> 
-
-
     </section>
 </body>
 </html>
