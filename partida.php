@@ -60,7 +60,7 @@
 
 		            <div class="contU">
 
-		            		<div class="cartasU">
+		            		<div class="cartasU" id="conM">
 		        								
 		            			<div class="carta1" id="carta1" draggable="true">
 								<?php

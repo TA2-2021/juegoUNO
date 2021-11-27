@@ -26,14 +26,14 @@ $carta = random_int(1,56);
             
             $color = $resultado1['color'];
             $numerito = $resultado1['numero'];
-            echo "<img id='cart' style='width: 99.9%; height: 99.9%; border-radius: 5%; cursor:move;' src='img/$color/$numerito.png' draggable='true'>";
+            echo "<img id='cart' class='cart' style='width: 99.9%; height: 99.9%; border-radius: 5%; cursor:move;' src='img/$color/$numerito.png' draggable='true'>";
         } 
         elseif ($carta >= 41) {
         $sql = mysqli_query($conn, "SELECT simbolo.simbolo, carta.color,carta.idCarta FROM simbolo INNER JOIN pertenece on simbolo.idSimbolo = pertenece.idSimbolo INNER JOIN carta ON pertenece.idCarta = carta.idCarta WHERE carta.idCarta = $carta");
             $resultado = mysqli_fetch_array($sql);
             $color = $resultado['color'];
             $simbolito = $resultado['simbolo'];
-            echo "<img id='cart' style='width: 99.9%; height: 99.9%; border-radius: 5%; cursor:move;' src='img/$color/$simbolito.png' draggable='true'>";
+            echo "<img id='cart' class='cart' style='width: 99.9%; height: 99.9%; border-radius: 5%; cursor:move;' src='img/$color/$simbolito.png' draggable='true'>";
         }
 
     }
@@ -78,14 +78,14 @@ $carta = random_int(1,56);
             
             $color = $resultado1['color'];
             $numerito = $resultado1['numero'];
-            echo "<img id='cart' style='width: 99.9%; height: 99.9%; border-radius: 5%; cursor:move;' src='img/$color/$numerito.png' draggable='true'>";
+            echo "<img id='cart' class='cart' style='width: 99.9%; height: 99.9%; border-radius: 5%; cursor:move;' src='img/$color/$numerito.png' draggable='true'>";
         } 
         elseif ($carta >= 41) {
         $sql = mysqli_query($conn, "SELECT simbolo.simbolo, carta.color,carta.idCarta FROM simbolo INNER JOIN pertenece on simbolo.idSimbolo = pertenece.idSimbolo INNER JOIN carta ON pertenece.idCarta = carta.idCarta WHERE carta.idCarta = $carta");
             $resultado = mysqli_fetch_array($sql);
             $color = $resultado['color'];
             $simbolito = $resultado['simbolo'];
-            echo "<img id='cart' style='width: 99.9%; height: 99.9%; border-radius: 5%; cursor:move;' src='img/$color/$simbolito.png' draggable='true'>";
+            echo "<img id='cart' class='cart' style='width: 99.9%; height: 99.9%; border-radius: 5%; cursor:move;' src='img/$color/$simbolito.png' draggable='true'>";
         }
         echo reset($baraja);
     }
