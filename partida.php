@@ -56,7 +56,10 @@
 		            	</div>
 
 		            	<div class="mazo">
-						<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src="img/revez.jpg" alt="">
+						<?php
+						include 'codigo.php';
+						cartasBaraja(); ?>
+						<img style='width: 99.5%; height: 99.5%; border-radius: 5%; position:absolute;' src="img/revez.jpg" alt="">
 		            	</div>
 		            	
 		            </div>
@@ -68,7 +71,7 @@
 								<div class="carta1" id="draggable">
 								<?php
 								session_start();
-								include 'codigo.php';
+								
 								Invocar();
 								?>
 		            			</div>

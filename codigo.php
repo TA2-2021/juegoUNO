@@ -57,32 +57,40 @@ if (isset($resultado)){
         echo "<img class='cart' style='width: 99.5%; height: 99.5%; border-radius: 5%;' src='img/Negro/$numerito.png' draggable='true' >";
 }
 
-}elseif ($randomNumbers[12]) {
+        $carta = random_int(1,60);
 
-echo "<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src='img/Negro/+4.png'>";
-} else echo "<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src='img/$color/colores.png'>";
+        if ($carta <= 40){
+            $sql1 = mysqli_query($conn, "SELECT carta.color, comun.numero FROM carta INNER JOIN comun ON carta.IdCarta = comun.idCarta WHERE carta.idCarta = $carta");
+            $resultado1 = mysqli_fetch_array($sql1);
+            
+            $color = $resultado1['color'];
+            $numerito = $resultado1['numero'];
+            echo "<img id='cart' style='width: 99.9%; height: 99.9%; border-radius: 5%; cursor:move;' src='img/$color/$numerito.png' draggable='true'>";
+        } 
+        elseif ($carta >= 41) {
+        $sql = mysqli_query($conn, "SELECT simbolo.simbolo, carta.color,carta.idCarta FROM simbolo INNER JOIN pertenece on simbolo.idSimbolo = pertenece.idSimbolo INNER JOIN carta ON pertenece.idCarta = carta.idCarta WHERE carta.idCarta = $carta");
+            $resultado = mysqli_fetch_array($sql);
+            $color = $resultado['color'];
+            $simbolito = $resultado['simbolo'];
+            echo "<img id='cart' style='width: 99.9%; height: 99.9%; border-radius: 5%; cursor:move;' src='img/$color/$simbolito.png' draggable='true'>";
+        }
 
+    }
 
-$baraja = array();
-$counter = 0;
-        While($counter <= $consBar['cantCartas']){  
-            $random1 = -1;
-            $random2 = -1;
-            $random1 = random_int(1,15);
-            $random2 = random_int(1,5);
-            if($random1 <= 13 AND $random2 != 5){
-            array_unshift($baraja,$randomNumbers[$random1]."<tr>".$randomColors[$random2]);
-          
+    function cartasBaraja(){
+        $baraja = array();
+        $counter = 0;
+        $decounter = 40;
+        while($counter < 40){
+            $carta = 0;
+            $carta = random_int(1,60);
+            array_unshift($baraja,$carta);
+            unset($baraja[$decounter]);
+            $counter = $counter + 1;
+            $decounter = $decounter - 1;
+            
         }
-        elseif ($random1 == 14){
-          array_unshift($baraja,"+4");
-        } elseif ($random1 == 15){
-            array_unshift($baraja,"ElegirColor");
-        }
-    //      echo $baraja[$counter];
-          $counter = $counter + 1;
-          
-        }
+        echo end($baraja);
         echo count($baraja);
     }
 
