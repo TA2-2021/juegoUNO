@@ -12,6 +12,7 @@ funcSimbolos(){
  //   document.getElementById("rece").innerHTML='<'img src='"prueba.png"'>'
 }
 </script>
+
 <?php
 $carta = random_int(1,56);
     function Invocar(){

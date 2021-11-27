@@ -23,7 +23,7 @@
 		        	<div class="contE">
 
 		            		<div class="cartasE">
-		            				
+		            			
 		            			<div class="carta1">
 								<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src="img/revez.jpg" alt="">
 		            			</div>	

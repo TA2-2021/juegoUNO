@@ -51,7 +51,7 @@
 							<th scope="col">#</th>
 							<th scope="col">Ganador</th>
 							<th scope="col">Perdedor</th>
-							<th scope="col">Handle</th>
+							<th scope="col">Fecha</th>
 						</tr>
 						</thead>
 						<tbody>
@@ -66,7 +66,7 @@
                                 die("Error al conectar: ". $conn->connect_error);
                             }
 
-                            $sql = "SELECT ganador, perdedor FROM juega WHERE user1 = '$usuario' OR user2 = '$usuario'";
+                            $sql = "SELECT ganador, perdedor, fechaHora FROM compite WHERE user1 = '$usuario' OR user2 = '$usuario'";
                             $registro = $conn-> query($sql);
                             
                             if(isset($registro)){
@@ -75,7 +75,7 @@
                                     echo "<td> ". $contador ."</td>";
                                     echo "<td> ". $resultado['ganador'] ."</td>";
                                     echo "<td> ". $resultado['perdedor'] ."</td>";
-                                    echo "<td>Identificador?</td>";
+                                    echo "<td> ". $resultado['fechaHora'] ."</td>";
                                     echo "</tr>";
                                     $contador += 1;
                                 }
@@ -101,9 +101,9 @@
                 <div class="card" style="width: 18rem;">
                     <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <?php
+                                include('php/conexion.php');
+                            ?>
                         </div>
                 </div>
 
@@ -156,7 +156,7 @@
                 
                 if(isset($registro)){
                     while($resultado = mysqli_fetch_array($registro) and $contador <= 15){
-                            echo '<a href="#" class="lol2 list-group-item" id="btn-abrir" >'. $resultado['username'] .'-'. $resultado['estado'] .'</a>';
+                            echo '<a href="#" class="lol2 list-group-item" id="btn-abrir" >'. $resultado['username'] .' - '. $resultado['estado'] .'</a>';
                             $contador+=1;
                     }
                     }else{

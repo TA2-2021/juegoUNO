@@ -1,10 +1,10 @@
 <?php
-if(!defined('SERVIDORBD') AND !defined('USUARIOBD') AND !defined('PASSWORDBD') AND !defined('BD')) {
+if(!DEFINED('SERVIDORBD') AND !DEFINED('USUARIOBD') AND !DEFINED('PASSWORDBD') AND !DEFINED('BD')) {
     
     DEFINE("SERVIDORBD", "localhost");
     DEFINE("USUARIOBD", "root");
     DEFINE("PASSWORDBD", "");
-    DEFINE("BD", "parcial");
+    DEFINE("BD", "bdprogra");
     
 $conn = new mysqli(SERVIDORBD, USUARIOBD, PASSWORDBD, BD);
 }
