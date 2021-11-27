@@ -66,7 +66,7 @@
                                 die("Error al conectar: ". $conn->connect_error);
                             }
 
-                            $sql = "SELECT ganador, perdedor FROM juega WHERE user1 = '$usuario' OR user2 = '$usuario'";
+                            $sql = "SELECT ganador, perdedor FROM compite WHERE user1 = '$usuario' OR user2 = '$usuario'";
                             $registro = $conn-> query($sql);
                             
                             if(isset($registro)){
