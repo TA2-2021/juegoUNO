@@ -24,12 +24,12 @@
                     <input type="text" name="user" placeholder="Usuario" > 
                     <input type="password" name="pass" placeholder="Contraseña">
 
-                    <input class="boton" type="submit" value ="Aceptar">
-                    <a href="registrarse.php">Registrarse</a>
+                    <input id="ingresar" class="boton"type="submit" value ="Iniciar Sesion">
+                    <a class="boton"href="registrarse.php">Registrarse</a>
                 </form>
             </div> 
+
+
     </section>
-
-
 </body>
 </html>
