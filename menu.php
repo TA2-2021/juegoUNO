@@ -94,7 +94,7 @@
                 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                 
                 <div class="tituloP">
-                    <h1>Comprar cartas</h1>
+                    <h1 style="background-color: #9AD6FA ;">Comprar cartas</h1>
                 </div>
                     
                 <div class="card" style="width: 18rem;">
@@ -105,8 +105,15 @@
                                 if($conn-> connect_error){
                                     die ("Error al conectar: ". $conn->connect_error);
                                 }
-                                //! #9AD6FA
-                                $sql = "SELECT idCarta FROM especiales";
+                                
+                                $sql = "SELECT idCarta FROM especial";
+                                $registro = $conn->query($sql);
+                                
+                                //!COMO NO HAY ESPECIALES EN LA BDD NO MUESTRA NADA
+                                while($resultado = mysqli_fetch_array($registro)){
+                                    echo "<div><h3>Aqui va la carta idCarta ". $resultado['idCarta'] ."</h3></div>";
+                                    echo "<p>Descripcion de la Carta</p>";
+                                }
                             ?>
                         </div>
                 </div>
@@ -140,9 +147,9 @@
                                 $registro = $conn-> query($sql);
                             
                                 while($resultado = mysqli_fetch_array($registro)){
-                                echo "<div><h3>Aqui va la carta ". $resultado['idCarta'] ."</h3></div>";
-                                echo "<p>Descripcion de la Carta</p>";
-                            }
+                                    echo "<div><h3>Aqui va la carta idCarta ". $resultado['idCarta'] ."</h3></div>";
+                                    echo "<p>Descripcion de la Carta</p>";
+                                }
                             ?>
                         </div>
                 </div>
