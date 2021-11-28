@@ -102,11 +102,11 @@
                             <?php
                                 include('php/conexion.php');
 
-                                if($conn-> connect_error|){
+                                if($conn-> connect_error){
                                     die ("Error al conectar: ". $conn->connect_error);
                                 }
                                 //! #9AD6FA
-                                $sql = "SELECT idCarta FROM especiales"
+                                $sql = "SELECT idCarta FROM especiales";
                             ?>
                         </div>
                 </div>
