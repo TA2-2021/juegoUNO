@@ -26,15 +26,29 @@
 		            			
 		            			<div class="carta1">
 								<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src="img/revez.jpg" alt="">
+								<?php
+								include 'codigo.php';
+								session_start();
+								invocarRival(); 
+								?>
 		            			</div>	
 		            			<div class="carta1">
 								<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src="img/revez.jpg" alt="">
+								<?php
+								invocarRival(); 
+								?>
 		            			</div>	
 		            			<div class="carta1">
 								<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src="img/revez.jpg" alt="">
+								<?php
+								invocarRival(); 
+								?>
 		            			</div>	
 		            			<div class="carta1">
 								<img style='width: 99.5%; height: 99.5%; border-radius: 5%;' src="img/revez.jpg" alt="">
+								<?php
+								invocarRival(); 
+								?>
 		            			</div>	
 		            			
 		            		</div>		
@@ -45,7 +59,6 @@
 
 		            	<div class="mazoD" id="rece" ondrop='dropHandler(event);' ondragover='dragOverHandler(event);'>
 		            		<?php 
-							include 'codigo.php';
 							mostrarCarta();
 							?>
 		            	</div>
@@ -63,9 +76,7 @@
 		            		<div class="cartasU" id="conM">
 		        								
 		            			<div class="carta1" id="carta1" draggable="true">
-								<?php
-								session_start();
-								
+								<?php							
 								Invocar();
 								?>
 		            			</div>
