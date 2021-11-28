@@ -97,12 +97,16 @@
                     <h1>Comprar cartas</h1>
                 </div>
                     
-
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
                             <?php
                                 include('php/conexion.php');
+
+                                if($conn-> connect_error|){
+                                    die ("Error al conectar: ". $conn->connect_error);
+                                }
+                                //! #9AD6FA
+                                $sql = "SELECT idCarta FROM especiales"
                             ?>
                         </div>
                 </div>
@@ -118,14 +122,28 @@
                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                 
                 <div class="tituloP">
-                    <h1>Cartas Obtenidas</h1>
+                    <h1 style="background-color: #9AD6FA;">Cartas Obtenidas</h1>
                 </div>
                             
                 <div class="card w-100">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Button</a>
+                            <?php
+                                include('php/conexion.php');
+
+                                $usuario = $_SESSION['usuario'];
+
+                                if($conn-> connect_error){
+                                    die ("Error al conectar: ". $conn-> connect_error);
+                                }
+
+                                $sql = "SELECT idCarta FROM tiene WHERE username = '$usuario'";
+                                $registro = $conn-> query($sql);
+                            
+                                while($resultado = mysqli_fetch_array($registro)){
+                                echo "<div><h3>Aqui va la carta ". $resultado['idCarta'] ."</h3></div>";
+                                echo "<p>Descripcion de la Carta</p>";
+                            }
+                            ?>
                         </div>
                 </div>
                 

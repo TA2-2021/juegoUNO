@@ -9,7 +9,7 @@ for (var i=0; i < btnAbrirpopup.length; i++) {
             title: '¿Iniciar partida?',
             buttons: ["No", "Si"],
             }).then(function(){
-            window.location = "partida.php";
+                window.location = "partida.php";
         });
     }
 };

@@ -4,7 +4,7 @@ if(!DEFINED('SERVIDORBD') AND !DEFINED('USUARIOBD') AND !DEFINED('PASSWORDBD') A
     DEFINE("SERVIDORBD", "localhost");
     DEFINE("USUARIOBD", "root");
     DEFINE("PASSWORDBD", "");
-    DEFINE("BD", "bdprogra");
+    DEFINE("BD", "parcial");
     
 $conn = new mysqli(SERVIDORBD, USUARIOBD, PASSWORDBD, BD);
 }
